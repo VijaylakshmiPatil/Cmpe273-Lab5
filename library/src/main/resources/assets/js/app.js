@@ -18,7 +18,6 @@ $(document).ready(function(){
 $(":button").click(function() {
     var isbn = this.id;
     var status = "{{status}}";
-    //alert('About to report lost on ISBN ' + isbn);
     if(confirm('Reporting a lost Book ' + isbn + '\nConfirm?')){
     	$.ajax({
         	url: "/library/v1/books/"+isbn+"?status=lost",
